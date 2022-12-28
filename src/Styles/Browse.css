@@ -1,0 +1,36 @@
+
+
+
+.browser__wrapper{
+    background-color: #141414;
+}
+
+.mainmedia__container{
+    max-height: 70%;
+    overflow: hidden;
+}
+
+.carousel__container{
+    z-index: 5 !important;
+    position: relative;
+    top:-5% !important;
+}
+
+.modal__container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index:-50000;
+    transition: z-index linear 0.25s;
+}
+
+.bigmodal__show{
+    top: 0;
+    z-index:50000;
+    overflow-y: auto;   
+}
+
+.background__bigmodal{
+    overflow-y: clip;
+    width: 100%;
+}

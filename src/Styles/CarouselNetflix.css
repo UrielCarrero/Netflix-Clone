@@ -1,0 +1,188 @@
+.carousel__title{
+    color:white;
+    font-size: 18px;
+    margin-left: 60px;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-end;
+}
+
+.carousel__title > i {
+    color: #54b9c5;
+    font-size: 20px;
+    font-weight: 600;
+    height: 21px;
+    transition: font-size 0.5s linear 0.5s, height 0.5s linear 0.5s;
+}
+
+.carousel__title > span {
+    display: flex;
+    padding-left: 0%;
+    color: #54b9c5;
+    opacity: 0;
+    font-weight: 600;
+    font-size: 14px;
+    max-width: 0px;
+    transition: max-width 0.5s linear 0.5s, padding-left 0.5s linear 0.5s, opacity 0.5s linear 0.5s ;
+    white-space: nowrap;
+}
+
+.carousel__title:hover {
+    cursor: pointer;
+}
+
+.carousel__title:hover > i {
+    font-size: 14px;
+    height: 15px;
+}
+
+.carousel__title:hover > span {
+    max-width: 120px;
+    padding-left: 2%;
+    opacity: 1;
+}
+
+.slick-slider{
+    margin-bottom: 45px;
+    z-index: 10 !important;
+}
+
+.slick-list{
+    max-width: 500px;
+}
+/**/
+.slick-track{
+    z-index: 10 !important;
+}
+
+.slick-slide{
+    z-index: 10 !important;
+}
+
+
+
+.carousel__span{
+    z-index: 10 !important;
+    background-color: transparent;
+    width: 100% !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slide__netflixcarrousel{
+    padding-left: 3px;
+    padding-right: 3px;
+    display: inline-block;
+    margin: 0px;
+    z-index: 1;
+}
+
+.slide__netflixcarrousel > img {
+    display: block;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.slick-list{
+    max-width: 100%;
+}
+
+
+.next__button, .prev__button{
+    position: absolute;
+    top:0px;
+    height: 100%;
+}
+
+.next__button{
+    right: -2px;
+}
+
+.prev__button{
+    left: -10px;
+    z-index: 3;
+}
+
+
+.next__button > button, .prev__button > button {
+    background-color: rgba(12, 12, 12, 0.438);
+    color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 3rem;
+    height: 139px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+    .next__button > button > i, .prev__button > button > i{
+        font-size: 1.5rem;
+        margin-right: -6%;
+    }
+
+  }
+
+.slick-slider:hover .prev__button > button > i, .slick-slider:hover .next__button > button > i{
+    color: white;
+}
+
+.slick-slider:hover .slick-dots{
+    z-index: 1;
+}
+
+.slick-dots{
+    z-index: -2;
+    display: flex;
+    position: absolute;
+    top: -12%;
+    width: 100%;
+    padding-right: 30px;
+    background-color: transparent;
+    justify-content: flex-end;
+}
+
+.slick-dots > li {
+    background-color: transparent;
+    display: inline-block;
+}
+
+.slick-dots > li > button {
+    background-color: gray;
+    margin-left: 2px;
+    color: transparent;
+    border: none;
+    height: 2px;
+    width: 5px;
+}
+
+.slick-active > button {
+    background-color: white !important;
+}
+
+.carousel__dots{
+    background-color: white;
+}
+
+.slidetop__netflixcarrousel{
+    padding-left: 3px;
+    padding-right: 3px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0px;
+}
+
+.slidetop__netflixcarrousel > img{
+    display: inline-block !important;
+    height: max-content;
+    width: 50%;
+}
+
+.svgcarousel__number{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+

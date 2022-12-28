@@ -1,0 +1,94 @@
+.navbar{
+    display: block;
+    padding-top: 20px !important;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: transparent;
+    z-index: 1;
+    position: relative;
+}
+
+.logo__nav{
+    height: 50px;
+
+}
+
+.red__button{
+    background-color: #e50914;
+    border: none;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5%;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.red__button > a{
+    text-decoration: none;
+    color: white !important;
+}
+
+.red__button > a:hover {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.right__text{
+    display: flex;
+    margin-right: 10%;
+    width: max-content;
+}
+
+.selectlang__nav{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.37);
+    color: white;
+    border-radius: 3%;
+    outline: solid 1px;
+    outline-color: rgba(255, 255, 255, 0.849) !important;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 5px;
+    padding-right: 5px;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
+}
+
+.selectlang__nav > i{
+    justify-content: center;
+    margin-left: 1%;
+    
+}
+
+
+.selectlang__nav > select{
+    /*-webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;*/
+    display: inline;
+    height: fit-content;
+    font-size: 14px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.37);
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+.selectlang__nav > select:active{
+    background-color: rgba(0, 0, 0, 0.37);
+    border: none;
+}
+
+.selectlang__nav > select:active .lang_option{
+    background-color: rgba(0, 0, 0, 0.37);
+    border: none;
+}
+

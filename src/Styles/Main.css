@@ -1,0 +1,32 @@
+.main__container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.nav__black{
+    background-color: rgb(20, 20, 20);
+}
+
+.nav__wrapper{
+    position: fixed;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    height: fit-content;
+    background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+    /*background-image:linear-gradient(0deg,rgba(0, 0, 0, 0.055) 0,transparent 30%,rgba(0, 0, 0, 0.692)) !important;*/
+    padding-bottom: 10px;
+    z-index: 100;
+}
+
+
+.mainfooter__container{
+    position:absolute;
+    z-index: -4;
+    background-color: black;
+    color: gray;
+    width: 100%;
+    padding-left: 17%;
+    padding-right: 25%;
+    border-top: 10px solid;
+    border-color: #222;
+}

@@ -1,0 +1,86 @@
+.footer__container{
+    color:  #737373;
+    background-color: black;
+    margin-bottom: 2%;
+}
+
+.number__footer{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 3%;
+    margin-top: 8%;
+}
+
+.number__footer > span{
+    margin-left: 1%;
+}
+
+.number__footer > span:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.footer__columns{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+
+.footer__columns > p{
+    margin-top: 15%;
+}
+
+.selectlang__navfooter{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.37);
+    color: #999;
+    outline: solid 0.8px;
+    outline-color: #333 !important;
+    padding-top: 8% !important;
+    padding-bottom: 10% !important;
+    padding-right: 4%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.selectlang__navfooter:hover{
+    outline-color: #b3b3b3 !important;
+}
+
+.selectlang__navfooter > i{
+    align-self: center;
+    justify-self: center;
+    font-size: 18px;
+    margin-right: 11%;
+    height: 22px;
+}
+
+
+.selectlang__navfooter > select{
+    height: fit-content;
+    font-size: 17px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.37);
+    color:  #999;
+    border: none;
+    font-weight: 600;
+    margin-right: 0%;
+}
+
+.selectlang__navfooter > select:active{
+    background-color: rgba(0, 0, 0, 0.37);
+    border: none;
+}
+
+.selectlang__navfooter > select:active .lang_option{
+    background-color: rgba(0, 0, 0, 0.37);
+    border: none;
+}
+
+.brand__footer{
+    margin-top: 15%;
+    padding-top: 1%;
+}
+
+

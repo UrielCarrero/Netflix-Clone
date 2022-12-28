@@ -1,0 +1,68 @@
+.card__container{
+    display: flex;
+    background-color: black;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    color:white;
+    border-top: 10px solid;
+    border-color: #222;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.rightcard__container{
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 45% !important;
+    height: 320px;
+    position: relative;
+}
+
+.leftcard__container{
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+    width: 55% !important;
+    position: relative;
+    height: 320px;
+}
+
+.text__cardcontent{
+    text-align: start;
+    width: 80%;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    /*margin: 0px !important;
+    margin-left: 130px !important;
+    padding-top: 25%;
+    padding-bottom: 25%;*/
+}
+
+.card__title{
+    font-size: 3.125rem;
+    font-family: Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+
+.card__description{
+    font-size: 1.6em;
+    font-family: Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    font-stretch: ultra-expanded;
+    font-weight: 500;
+}
+
+.card__img{
+    position: absolute;
+    z-index: 100;
+    width: 90%;
+}
+
+.card__video{
+    position: absolute;
+    z-index: 0;
+    width: 66%;
+}

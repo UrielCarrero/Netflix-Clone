@@ -1,0 +1,18 @@
+.mylist__container{
+    background-color: #141414;
+}
+
+.nav__mylist{
+    background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+    margin-bottom: 3%;
+}
+
+.mylist__container > h3{
+    position: sticky;
+    top: 10px;
+    color: white;
+    background-color: #141414;
+    z-index: 50;
+    padding-left: 4%;
+    font-family: Helvetica, sans-serif;
+}

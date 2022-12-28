@@ -1,0 +1,178 @@
+.overlaped__page{
+    width: 100%;
+    position:relative;
+    top: 0px;
+}
+
+
+.maincolimg__container{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+    top:0;
+    justify-content: center;
+}
+
+.maincol__image{
+    z-index: -2;
+    width:100%; 
+    height:auto;
+    display: block;
+}
+
+.gradient__image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.4);
+    background-image:linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+}
+
+.message__container{
+    color: white;
+    position: absolute;
+    top:30%;
+    text-align: center;
+    z-index: 1;
+    width: 47%;
+}
+
+.col__title{
+    font-size: 3.125rem;
+    font-weight: 620;
+    line-height: 55px;
+}
+
+.col__subtitle{
+    font-size: 1.625rem;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+
+.col__desc{
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+
+.email__cont{
+    height: 60px;
+    width: 85%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.email__cont > label {
+    position: absolute;
+    color: #8c8c8c;
+    font-size: 16px;
+    font-weight: 450;
+    margin-left: 3%;
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    padding-top: 4%;
+    transition: font-size 0.1s;
+}
+
+
+.email__cont > input {
+    border: none;
+    margin-left: 10px;
+    width: 90%;
+    height: 70%;
+}
+
+.email__cont > input:focus {
+    border: none;
+    outline: none;
+}
+
+.active__label{
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    padding-top: 1% !important;
+}
+
+
+.col__cards{
+    background-color: black;
+    width: 100%;
+}
+
+.getstr__cont{
+    display: flex;
+}
+
+.getstr__button {
+    background-color: #e50914;
+    height: 60px;
+    width: 40%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-left: 0%;
+}
+
+.getstr__button:hover{
+    background-color: red;
+}
+
+.getstr__button > input{
+    background-color: transparent;
+    display: block;
+    border: none;
+    color: white;
+    font-size: 1.75rem;
+}
+
+.getstr__button > i{
+    font-size: 1.75rem;
+}
+
+.question__col{
+    padding-top: 5%;
+
+    border-top: 10px solid;
+    border-color: #222;
+    background-color: black;
+    color:white;
+    text-align: center;
+}
+
+.question__col > h2{
+    font-size: 3.125rem;
+    margin-bottom: 5%;
+}
+
+.question__col > p{
+    font-size: 1.2rem;
+    font-weight: 470;
+    margin-top: 5%;
+}
+
+.email__lowinput{
+    width: max-content !important;
+    display: flex;
+}
+
+.getstrlow__cont{
+    display: flex;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    padding-bottom: 5%;
+}

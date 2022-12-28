@@ -1,0 +1,79 @@
+.question__container{
+    background-color: black;
+    margin-bottom: 8px;
+}
+
+.question__card, .answer__card, .hide__answer{
+    font-size: 1.625rem;
+    display: flex;
+    justify-self: center;
+    color: white;
+    background-color: #303030;
+    width: 60%;
+    margin-left: 20%;
+    padding: 30px;
+    font-weight: 400;
+}
+
+.question__card{
+    justify-content: space-between;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+/*.hide__answer{
+
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    
+    transform: scaleY(0);
+    transform-origin: top;
+    transition-delay: 3s, 3s, 3s, 3s, 3s;
+
+}*/
+
+
+/*.show__answercard{
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    position: static;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition-delay: 3s, 3s, 0.3s, 0.3s, 3s;
+}*/
+
+.hide__answer{
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+.show__answercard{
+    max-height: 1200px;
+}
+
+.answer__card{
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: start;
+    padding-left: 50px;
+    text-align: start;
+    transition: max-height 0.25s linear 0s, padding-top 0.25s linear, padding-bottom 0.25s linear;
+
+}
+
+.answer__card > p{
+    display: inline-block;
+    padding-left: 10px !important;
+    margin-top: 30px !important;
+}
+
+.question__card > i{
+    font-size: 2.5rem;
+    font-weight: 300;
+    height: 35px;
+    margin-top: -10px;
+}

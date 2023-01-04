@@ -72,11 +72,13 @@
     .leftcard__container{
         order: 1 !important;
         justify-content: center !important;
+        width: 100% !important;
     }
 
     .rightcard__container{
         order: 2 !important;
         justify-content: center;
+        width: 100% !important;
     }
 
     .card__title, .card__description{
@@ -101,4 +103,5 @@
     .card__description{
         font-size: 1rem;
     }
+
 }

@@ -1,0 +1,123 @@
+[debug] [2023-01-04T17:08:13.608Z] ----------------------------------------------------------------------
+[debug] [2023-01-04T17:08:13.619Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Eduardo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-01-04T17:08:13.623Z] CLI Version:   11.19.0
+[debug] [2023-01-04T17:08:13.623Z] Platform:      win32
+[debug] [2023-01-04T17:08:13.624Z] Node Version:  v16.16.0
+[debug] [2023-01-04T17:08:13.632Z] Time:          Wed Jan 04 2023 12:08:13 GMT-0500 (Colombia Standard Time)
+[debug] [2023-01-04T17:08:13.633Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-04T17:08:14.065Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-04T17:08:14.068Z] > authorizing via signed-in user (urielcarrerocuadrado@gmail.com)
+[debug] [2023-01-04T17:08:14.068Z] [iam] checking project netflixclone-uriel for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-01-04T17:08:14.078Z] > refreshing access token with scopes: []
+[debug] [2023-01-04T17:08:14.089Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-01-04T17:08:14.089Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-04T17:08:14.955Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-01-04T17:08:14.956Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-04T17:08:15.015Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixclone-uriel:testIamPermissions [none]
+[debug] [2023-01-04T17:08:15.016Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixclone-uriel:testIamPermissions x-goog-quota-user=projects/netflixclone-uriel
+[debug] [2023-01-04T17:08:15.017Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixclone-uriel:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-04T17:08:15.797Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixclone-uriel:testIamPermissions 200
+[debug] [2023-01-04T17:08:15.798Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixclone-uriel:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-04T17:08:15.806Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflixclone-uriel [none]
+[debug] [2023-01-04T17:08:18.668Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflixclone-uriel 200
+[debug] [2023-01-04T17:08:18.669Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflixclone-uriel {"projectId":"netflixclone-uriel","projectNumber":"475854883967","displayName":"NetflixClone","name":"projects/netflixclone-uriel","resources":{"hostingSite":"netflixclone-uriel"},"state":"ACTIVE","etag":"1_2669319a-93cb-4e9f-b6e0-134591be5a4a"}
+[info] 
+[info] === Deploying to 'netflixclone-uriel'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-01-04T17:08:18.718Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixclone-uriel/versions [none]
+[debug] [2023-01-04T17:08:18.719Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixclone-uriel/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-01-04T17:08:20.576Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixclone-uriel/versions 200
+[debug] [2023-01-04T17:08:20.577Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixclone-uriel/versions {"name":"projects/475854883967/sites/netflixclone-uriel/versions/9974a0c6b3de3512","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[netflixclone-uriel]: beginning deploy... 
+[info] i  hosting[netflixclone-uriel]: found 28 files in build 
+[debug] [2023-01-04T17:08:20.696Z] [hosting] uploading with 200 concurrency
+[debug] [2023-01-04T17:08:25.199Z] [hosting] hash cache [YnVpbGQ] stored for 28 files
+[debug] [2023-01-04T17:08:25.200Z] [hosting][hash queue][FINAL] {"max":4425,"min":32,"avg":765.1428571428571,"active":0,"complete":28,"success":28,"errored":0,"retried":0,"total":28,"elapsed":4489}
+[debug] [2023-01-04T17:08:25.203Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/475854883967/sites/netflixclone-uriel/versions/9974a0c6b3de3512:populateFiles [none]
+[debug] [2023-01-04T17:08:25.203Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475854883967/sites/netflixclone-uriel/versions/9974a0c6b3de3512:populateFiles {"files":{"/favicon.ico":"e73a06ea547c5d10c308163c361da20654874f8748281b751c7478e8e22732d0","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/asset-manifest.json":"bf7b5013bdc075e2160cd025a3b6f70995ce31114834149b42479d50f46f9d47","/static/css/main.45a3e7e4.chunk.css":"242faa92cb750d55e2eb779e8842bf7cdb3ab6d85c77ee111444f7448be7fd31","/static/js/1.a60f3433.chunk.js":"2beee1f3391deb6a57e91d6b66f3876425c53d274dc39a5162dd4c65888dd004","/static/js/1.a60f3433.chunk.js.map":"68f2038e98efca7762418643d08ca12e6bb6f3f76d1ffdf753880a1f77bd5af6","/index.html":"1775faf23c7829e1b8003d63fdcc2738aa15161fa990aac57aa94c8fe1aac37e","/static/js/runtime~main.1b5d91c2.js":"b84409a4e6903fd298b649f788dc0180e6bf41dcdf6cef593ecb1bb41fb6d05e","/static/js/runtime~main.1b5d91c2.js.map":"15480eb09d4ed5cbb4fbaaccae79e786f402a4920fb3bd7fda3f71ae8098cd51","/precache-manifest.2896c81ae85caeca67068f6b90c99098.js":"188115fa85b39d2d09c932d285e8108be9f9973fdd7521f4b1fbefe1656abc1a","/service-worker.js":"dfad8f0651f9dd151c96b6cbddd2d2e8e0b77c803c671c0e337b98f40030cb15","/static/css/main.45a3e7e4.chunk.css.map":"22bbe8000b6f95800dd35d6c5f60c48c2583923aea3140da79181ffb8dfdd8b7","/static/media/Netflix_logo.ed88059c.png":"6fc51fa14c7d4ff7e26f866f48f8abcd0d0c9c6f3879b91799f3d3baf12df92d","/static/css/2.6e24ab2b.chunk.css":"ca7887f00d7b4b5525dd6b3541de76d5a834138911f2e2f3e695206dac4c9714","/static/media/remixicon.9915fef9.woff2":"ddffd820bc915430a7f0852c017d00624c2e86adc0237252823752c7a7a26375","/static/media/remixicon.881fbc46.woff":"882ce6588d0e2a021964119ca3133503d7b490dfb196d1ae808fd8a067f1c8e3","/static/js/main.c967f179.chunk.js.map":"67be4f7754627f4d34a4355e04af866cd6e5232b8d2a940335241e5e1ea1b6fb","/static/media/remixicon.31d28485.eot":"5b8bc94df38353c843728d687c09929d00f6a6d117ee61db9768a73251624fda","/static/js/2.988174ae.chunk.js":"66280ef652e5f122e6cd104d5e39680d039ead3287a1e847a3d7f7c2982cef29","/static/media/remixicon.888e61f0.ttf":"d934f6ba610e11447def75779aca53d486a61316583d8e6c50df046636df43a2","/static/css/2.6e24ab2b.chunk.css.map":"50d144f94f926a1ba3628d3d9534c8abfd6d8794316952ba78b64300f4bfe64d","/static/js/main.c967f179.chunk.js":"d3fa8d2f73274394c496e72ff8d2e09f09f6fb7cf47fa020d568de4f96554b67","/static/media/remixicon.95138f36.svg":"6cdc6f4b9795026411bdcf9bb780e20f382e98674332966ec6d2700b1b8e9f7f","/static/js/2.988174ae.chunk.js.map":"ebc6fbad2583b76e0ca2b31e14d3d67014b94b3c56b8caabfe0b2930c60c712f","/static/media/Trol_Traileroficial_Netflix.7881dca9.mp4":"b26760ef507c952e88195ef9846c56eff2172d98e42e13c3faa42a657d542948"}}
+[debug] [2023-01-04T17:08:26.071Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/475854883967/sites/netflixclone-uriel/versions/9974a0c6b3de3512:populateFiles 200
+[debug] [2023-01-04T17:08:26.071Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475854883967/sites/netflixclone-uriel/versions/9974a0c6b3de3512:populateFiles {"uploadRequiredHashes":["22bbe8000b6f95800dd35d6c5f60c48c2583923aea3140da79181ffb8dfdd8b7","dfad8f0651f9dd151c96b6cbddd2d2e8e0b77c803c671c0e337b98f40030cb15","67be4f7754627f4d34a4355e04af866cd6e5232b8d2a940335241e5e1ea1b6fb","242faa92cb750d55e2eb779e8842bf7cdb3ab6d85c77ee111444f7448be7fd31","d3fa8d2f73274394c496e72ff8d2e09f09f6fb7cf47fa020d568de4f96554b67","188115fa85b39d2d09c932d285e8108be9f9973fdd7521f4b1fbefe1656abc1a","bf7b5013bdc075e2160cd025a3b6f70995ce31114834149b42479d50f46f9d47","1775faf23c7829e1b8003d63fdcc2738aa15161fa990aac57aa94c8fe1aac37e"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files"}
+[debug] [2023-01-04T17:08:26.081Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/22bbe8000b6f95800dd35d6c5f60c48c2583923aea3140da79181ffb8dfdd8b7 [none]
+[debug] [2023-01-04T17:08:26.081Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/22bbe8000b6f95800dd35d6c5f60c48c2583923aea3140da79181ffb8dfdd8b7 [stream]
+[debug] [2023-01-04T17:08:26.086Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/dfad8f0651f9dd151c96b6cbddd2d2e8e0b77c803c671c0e337b98f40030cb15 [none]
+[debug] [2023-01-04T17:08:26.086Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/dfad8f0651f9dd151c96b6cbddd2d2e8e0b77c803c671c0e337b98f40030cb15 [stream]
+[debug] [2023-01-04T17:08:26.092Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/67be4f7754627f4d34a4355e04af866cd6e5232b8d2a940335241e5e1ea1b6fb [none]
+[debug] [2023-01-04T17:08:26.092Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/67be4f7754627f4d34a4355e04af866cd6e5232b8d2a940335241e5e1ea1b6fb [stream]
+[debug] [2023-01-04T17:08:26.097Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/242faa92cb750d55e2eb779e8842bf7cdb3ab6d85c77ee111444f7448be7fd31 [none]
+[debug] [2023-01-04T17:08:26.097Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/242faa92cb750d55e2eb779e8842bf7cdb3ab6d85c77ee111444f7448be7fd31 [stream]
+[debug] [2023-01-04T17:08:26.103Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/d3fa8d2f73274394c496e72ff8d2e09f09f6fb7cf47fa020d568de4f96554b67 [none]
+[debug] [2023-01-04T17:08:26.103Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/d3fa8d2f73274394c496e72ff8d2e09f09f6fb7cf47fa020d568de4f96554b67 [stream]
+[debug] [2023-01-04T17:08:26.111Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/188115fa85b39d2d09c932d285e8108be9f9973fdd7521f4b1fbefe1656abc1a [none]
+[debug] [2023-01-04T17:08:26.111Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/188115fa85b39d2d09c932d285e8108be9f9973fdd7521f4b1fbefe1656abc1a [stream]
+[debug] [2023-01-04T17:08:26.118Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/bf7b5013bdc075e2160cd025a3b6f70995ce31114834149b42479d50f46f9d47 [none]
+[debug] [2023-01-04T17:08:26.119Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/bf7b5013bdc075e2160cd025a3b6f70995ce31114834149b42479d50f46f9d47 [stream]
+[debug] [2023-01-04T17:08:26.127Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/1775faf23c7829e1b8003d63fdcc2738aa15161fa990aac57aa94c8fe1aac37e [none]
+[debug] [2023-01-04T17:08:26.127Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/1775faf23c7829e1b8003d63fdcc2738aa15161fa990aac57aa94c8fe1aac37e [stream]
+[debug] [2023-01-04T17:08:26.134Z] [hosting][populate queue][FINAL] {"max":886,"min":886,"avg":886,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":940}
+[debug] [2023-01-04T17:08:26.134Z] [hosting] uploads queued: 8
+[debug] [2023-01-04T17:08:27.347Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/242faa92cb750d55e2eb779e8842bf7cdb3ab6d85c77ee111444f7448be7fd31 200
+[debug] [2023-01-04T17:08:27.347Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/242faa92cb750d55e2eb779e8842bf7cdb3ab6d85c77ee111444f7448be7fd31 [stream]
+[debug] [2023-01-04T17:08:27.769Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/bf7b5013bdc075e2160cd025a3b6f70995ce31114834149b42479d50f46f9d47 200
+[debug] [2023-01-04T17:08:27.770Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/bf7b5013bdc075e2160cd025a3b6f70995ce31114834149b42479d50f46f9d47 [stream]
+[debug] [2023-01-04T17:08:27.774Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/1775faf23c7829e1b8003d63fdcc2738aa15161fa990aac57aa94c8fe1aac37e 200
+[debug] [2023-01-04T17:08:27.775Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/1775faf23c7829e1b8003d63fdcc2738aa15161fa990aac57aa94c8fe1aac37e [stream]
+[debug] [2023-01-04T17:08:28.049Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/22bbe8000b6f95800dd35d6c5f60c48c2583923aea3140da79181ffb8dfdd8b7 200
+[debug] [2023-01-04T17:08:28.049Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/22bbe8000b6f95800dd35d6c5f60c48c2583923aea3140da79181ffb8dfdd8b7 [stream]
+[debug] [2023-01-04T17:08:30.008Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/67be4f7754627f4d34a4355e04af866cd6e5232b8d2a940335241e5e1ea1b6fb 200
+[debug] [2023-01-04T17:08:30.008Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/67be4f7754627f4d34a4355e04af866cd6e5232b8d2a940335241e5e1ea1b6fb [stream]
+[debug] [2023-01-04T17:08:31.350Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/d3fa8d2f73274394c496e72ff8d2e09f09f6fb7cf47fa020d568de4f96554b67 200
+[debug] [2023-01-04T17:08:31.351Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/d3fa8d2f73274394c496e72ff8d2e09f09f6fb7cf47fa020d568de4f96554b67 [stream]
+[debug] [2023-01-04T17:08:31.531Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/dfad8f0651f9dd151c96b6cbddd2d2e8e0b77c803c671c0e337b98f40030cb15 200
+[debug] [2023-01-04T17:08:31.532Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/dfad8f0651f9dd151c96b6cbddd2d2e8e0b77c803c671c0e337b98f40030cb15 [stream]
+[debug] [2023-01-04T17:08:34.289Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/188115fa85b39d2d09c932d285e8108be9f9973fdd7521f4b1fbefe1656abc1a 200
+[debug] [2023-01-04T17:08:34.290Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/netflixclone-uriel/versions/9974a0c6b3de3512/files/188115fa85b39d2d09c932d285e8108be9f9973fdd7521f4b1fbefe1656abc1a [stream]
+[debug] [2023-01-04T17:08:34.291Z] [hosting][upload queue][FINAL] {"max":8214,"min":1272,"avg":3690,"active":0,"complete":8,"success":8,"errored":0,"retried":0,"total":8,"elapsed":8219}
+[info] +  hosting[netflixclone-uriel]: file upload complete 
+[debug] [2023-01-04T17:08:34.297Z] [hosting] deploy completed after 13711ms
+[debug] [2023-01-04T17:08:34.312Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "netflixclone-uriel"
+    },
+    "version": "projects/475854883967/sites/netflixclone-uriel/versions/9974a0c6b3de3512"
+  }
+]
+[info] i  hosting[netflixclone-uriel]: finalizing version... 
+[debug] [2023-01-04T17:08:34.334Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixclone-uriel/versions/9974a0c6b3de3512 updateMask=status%2Cconfig
+[debug] [2023-01-04T17:08:34.335Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixclone-uriel/versions/9974a0c6b3de3512 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-01-04T17:08:35.984Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixclone-uriel/versions/9974a0c6b3de3512 200
+[debug] [2023-01-04T17:08:35.984Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixclone-uriel/versions/9974a0c6b3de3512 {"name":"projects/475854883967/sites/netflixclone-uriel/versions/9974a0c6b3de3512","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-01-04T17:08:20.231238Z","createUser":{"email":"urielcarrerocuadrado@gmail.com"},"finalizeTime":"2023-01-04T17:08:35.860087Z","finalizeUser":{"email":"urielcarrerocuadrado@gmail.com"}}
+[debug] [2023-01-04T17:08:35.985Z] [hosting] finalized version for netflixclone-uriel:[object Object]
+[info] +  hosting[netflixclone-uriel]: version finalized 
+[info] i  hosting[netflixclone-uriel]: releasing new version... 
+[debug] [2023-01-04T17:08:35.991Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixclone-uriel/channels/live/releases versionName=projects%2F475854883967%2Fsites%2Fnetflixclone-uriel%2Fversions%2F9974a0c6b3de3512
+[debug] [2023-01-04T17:08:35.991Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixclone-uriel/channels/live/releases {}
+[debug] [2023-01-04T17:08:38.854Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixclone-uriel/channels/live/releases 200
+[debug] [2023-01-04T17:08:38.855Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/netflixclone-uriel/channels/live/releases {"name":"projects/475854883967/sites/netflixclone-uriel/channels/live/releases/1672852118179113","version":{"name":"projects/475854883967/sites/netflixclone-uriel/versions/9974a0c6b3de3512","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-01-04T17:08:20.231238Z","createUser":{"email":"urielcarrerocuadrado@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp4d3ehjNcnk7JIGJAw7XjKTnIPASKD1lCEpJOEW=mo"},"finalizeTime":"2023-01-04T17:08:35.860087Z","finalizeUser":{"email":"urielcarrerocuadrado@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp4d3ehjNcnk7JIGJAw7XjKTnIPASKD1lCEpJOEW=mo"}},"type":"DEPLOY","releaseTime":"2023-01-04T17:08:38.179113930Z","releaseUser":{"email":"urielcarrerocuadrado@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp4d3ehjNcnk7JIGJAw7XjKTnIPASKD1lCEpJOEW=mo"}}
+[debug] [2023-01-04T17:08:38.855Z] [hosting] release: {"name":"projects/475854883967/sites/netflixclone-uriel/channels/live/releases/1672852118179113","version":{"name":"projects/475854883967/sites/netflixclone-uriel/versions/9974a0c6b3de3512","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-01-04T17:08:20.231238Z","createUser":{"email":"urielcarrerocuadrado@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp4d3ehjNcnk7JIGJAw7XjKTnIPASKD1lCEpJOEW=mo"},"finalizeTime":"2023-01-04T17:08:35.860087Z","finalizeUser":{"email":"urielcarrerocuadrado@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp4d3ehjNcnk7JIGJAw7XjKTnIPASKD1lCEpJOEW=mo"}},"type":"DEPLOY","releaseTime":"2023-01-04T17:08:38.179113930Z","releaseUser":{"email":"urielcarrerocuadrado@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp4d3ehjNcnk7JIGJAw7XjKTnIPASKD1lCEpJOEW=mo"}}
+[info] +  hosting[netflixclone-uriel]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/netflixclone-uriel/overview
+[info] Hosting URL: https://netflixclone-uriel.web.app
+[debug] [2023-01-04T17:08:45.695Z] Error: Timed out.
+    at Timeout.<anonymous> (C:\Users\Eduardo\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.

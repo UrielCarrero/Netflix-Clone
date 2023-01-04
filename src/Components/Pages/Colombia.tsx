@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState} from 'react'
+import React, { useEffect, useRef, useState} from 'react'
 import '../../Styles/Colombia.css'
 import {CardCol} from '../CardCol'
 import {Question} from '../Question'
@@ -13,7 +13,13 @@ const cardsCont = [
         description: "Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.",
         imgLink:"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png",
         videoLink:"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v",
-        videoXY: [80, 10]
+        videoXY: [80, 10],
+        videoDim: {
+            topFactor:0.15,
+            leftFactor:0.15,
+            heightFactor:0.65,
+            widthFactor:0.75
+        },
     },
     {
         title: "Download your shows to watch offline.",
@@ -26,30 +32,33 @@ const cardsCont = [
                 marginBottom:"5%",
                 outlineColor:"rgba(255, 255, 255, 0.25)",
                 outline:"1px solid",
-                borderRadius:"3%",
+                borderRadius:"5px",
                 padding:"2%",
                 backgroundColor:"black",
                 display:"flex",
                 justifyContent:"space-between",
                 alignItems:"center", 
-                width:"60%"
+                width:"fit-content",
+                minWidth:"60%"
                 },
             fImgStyle:{
-                height:"70px",
+                height:"3.5rem",
                 marginRight:"3%"
                 },
             firstIMG:"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png",
             titleStyle:{
                 color:"white",
-                fontWeight:"600"
+                fontWeight:"600",
+                fontSize:"1.5vw"
                 },
             title:"Stranger Things",
             subTitleStyle:{
-                color:"#0071eb"
+                color:"#0071eb",
+                fontSize:"1.5vw"
                 },
             subTitle:"Downloading...",
             sImgStyle:{
-                height:"70px"
+                height:"3.5rem"
             },
             sirstIMG:"https://i.pinimg.com/originals/16/24/0b/16240bf292e64ec97568759ced2ce5fe.gif"
 
@@ -62,7 +71,12 @@ const cardsCont = [
         imgLink:"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png",
         videoLink:"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v",
         videoXY: [110, -30], 
-        videoStyle: {width : "57%"},
+        videoDim: {
+            topFactor:0.1,
+            leftFactor:0.175,
+            heightFactor:0.5,
+            widthFactor:0.65
+        },
     }
     , 
     {
@@ -118,14 +132,16 @@ export const Colombia = ({setEmail}:IColombia):JSX.Element => {
     let changeOrder = true;
     let [classLabel, setClassLabel]=useState(false);
     let [openQuestion, setOpenQuestion] = useState(-1);
-    let [mainHeight, setMainHeight] = useState();
+    let [mainHeight, setMainHeight] = useState(88);
     let [loadedImg, setLoadedImg] = useState(false);
     let [emailValue, setEmailValue] = useState("")
 
-    useLayoutEffect(()=>{
-        
+    useEffect(()=>{
+        window.addEventListener('resize', ()=>{
+            setMainHeight(imgRef.current.clientHeight)
+        });
         setMainHeight(imgRef.current.clientHeight)
-    },[mainHeight, loadedImg])
+    },[mainHeight, loadedImg, CardCol, imgRef])
 
 
 
@@ -172,7 +188,7 @@ export const Colombia = ({setEmail}:IColombia):JSX.Element => {
     
     
     
-        <div style={{height:`${mainHeight!==0 && typeof mainHeight !=="undefined"?(mainHeight-88):1000}px`}}>
+        <div style={{height:`${mainHeight-88}px`}}>
     
         </div>
         {
@@ -188,8 +204,8 @@ export const Colombia = ({setEmail}:IColombia):JSX.Element => {
                                         videoLink={item.videoLink}
                                         videoXY={item.videoXY}
                                         changeOrder={changeOrder}
-                                        videoStyle={item.videoStyle}
-                                        aditionalIMG={item.aditionalIMG}/>
+                                        aditionalIMG={item.aditionalIMG}
+                                        videoDim={item.videoDim}/>
                             </div>
                         )
                     })}
@@ -198,12 +214,12 @@ export const Colombia = ({setEmail}:IColombia):JSX.Element => {
                     <h2>Frequently Asked Questions</h2>
                     {
                         questionsColombia.map((item:any, index)=>{
-                            return(<>
+                            return(
                             <span key={index}>
                                 <Question id={item.id} question={item.question} answer={item.answer} setQuestion={setQuestion}
                                     open={item.id===openQuestion?true:false}/>
                             </span>
-                            </>)
+                            )
                         })
                     }
             

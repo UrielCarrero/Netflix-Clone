@@ -16,21 +16,22 @@
 
 
 .rightcard__container{
-    display: flex !important;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    width: 45% !important;
-    height: 320px;
+    width: 45%;
+    height: fit-content;
     position: relative;
+    overflow: hidden;
 }
 
 .leftcard__container{
-    display: flex !important;
+    display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 55% !important;
+    width: 55% ;
     position: relative;
-    height: 320px;
+    height: fit-content;
 }
 
 .text__cardcontent{
@@ -56,7 +57,6 @@
 }
 
 .card__img{
-    position: absolute;
     z-index: 100;
     width: 90%;
 }
@@ -64,5 +64,41 @@
 .card__video{
     position: absolute;
     z-index: 0;
-    width: 66%;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 766px){
+
+    .leftcard__container{
+        order: 1 !important;
+        justify-content: center !important;
+    }
+
+    .rightcard__container{
+        order: 2 !important;
+        justify-content: center;
+    }
+
+    .card__title, .card__description{
+        text-align: center;
+    }
+
+    .imgcard__text{
+        font-size: 3vw !important;
+        white-space: nowrap;
+    }
+
+    .subimg1__card, .subimg2__card{
+        height: 12vw !important;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .card__title{
+        font-size: 2rem;
+    }
+
+    .card__description{
+        font-size: 1rem;
+    }
 }

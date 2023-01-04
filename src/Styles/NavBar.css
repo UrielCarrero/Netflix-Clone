@@ -176,3 +176,18 @@
     margin-bottom: -6%;
 }
 
+@media screen and (max-width: 640px){
+    .logo__nav{
+        height: 25px;
+    }
+
+    .navbar-text, .selectlang__nav, .red__button{
+        font-size: 0.9rem;
+    }
+
+    .container-fluid, .navbar{
+        display: flex;
+        min-width: 318px;    
+    }
+
+}

@@ -198,12 +198,18 @@
 
     .maincol__image{
         min-height: 90vh;
+        max-height: 110vh;
     }
 
     .getstr__cont, .getstrlow__cont{
         display: block;
         text-align: center;
         justify-items: center;
+    }
+
+    .getstrlow__cont{
+        width: 80%;
+        margin-left: 10%;
     }
 
     .col__title{
@@ -258,6 +264,11 @@
 @media screen and (max-width: 440px){
     .question__col > h2 {
         font-size: 2rem;
+    }
+
+    .maincol__image{
+        min-height: 110vh;
+        max-height: 130vh;
     }
 
     .col__title{

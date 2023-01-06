@@ -262,3 +262,34 @@
     font-weight: 400;
     font-family: Helvetica, sans-serif;
 }
+
+
+@media screen and (max-width: 848px){
+
+    .bigmodal__content{
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 548px){
+
+    .bigmodal__maininfo{
+        display: block;
+    }
+
+    .bigmodal__maininfo > span{
+        display: block;
+    }
+
+    .clasification__bigmodal{
+        width: fit-content;
+    }
+
+    .modaldescription__container{
+        display: block;
+        padding: 5% 5%;
+    }
+
+}

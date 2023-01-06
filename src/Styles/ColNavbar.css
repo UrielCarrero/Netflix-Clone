@@ -92,3 +92,14 @@
     border: none;
 }
 
+@media screen and (max-width: 432px){
+    .logo__nav {
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 366px){
+    .logo__nav {
+        height: 25px;
+    }
+}

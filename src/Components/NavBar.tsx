@@ -22,9 +22,32 @@ interface INavBar {
 
 
             <div className='nav__medium'>
+                <Nav>
+                    <NavItem>
+                        <div className='smallmenu__container'>
+                            <div className='smallnav__menu  navlink'>
+                                Explorar
+                                <i className="navexplore__menuarrow ri-arrow-up-s-fill"></i>
+                            </div>
+                            <div className='deployednav__menu'>
+                                <div>Inicio</div>
+                                <div>Series</div>
+                                <div>Peliculas</div>
+                                <div>Novedades Populares</div>
+                                <div>Mi lista</div>
+                                <div>Explorar por idiomas</div>
+                            </div>
+                        </div>
+                        
+                    </NavItem>
+                </Nav>
+
+            </div>
+
+            <div className='bignav__menu nav__medium'>
                 <Nav >
                     <NavItem >
-                    <NavLink className='nav__item' href="/browse">
+                    <NavLink href="/browse">
                         <div className='navlink'>Inicio</div>
                     </NavLink>
                     

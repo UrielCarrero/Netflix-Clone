@@ -23,35 +23,49 @@ const top10Icon =
 
 export const MainMedia = ({trailer , imgLink, imgTitle, description, clasification, pauseVideo, changeModalState, gatherDescription, page}:IMainMedia) => {
 
-    let mainImgRef = useRef<any>()
+    let mainImgRef = useRef<any>({
+        current:{
+            offsetWidth:"100vw",
+            offsetHeight:"auto"
+        }
+    })
     let msgContainer = useRef<any>()
     
     let [mute, setMute] = useState(true)
     let [showTrailer, setShowTrailer] = useState("notStarted")
     let [titleTop, setTitleTop] = useState(0)
+    let [videoDim, setVideoDim] = useState({
+                                            offsetWidth:"100vw",
+                                            offsetHeight:"auto"
+                                        })
+
     const navigate = useNavigate();
 
     useEffect(()=>{
         if(pauseVideo)
             setShowTrailer("notStarted")
-        },[titleTop])
 
-    useLayoutEffect(()=>{
         if (msgContainer !== undefined)
             setTitleTop(msgContainer.current.offsetTop)
-    },[msgContainer])
+
+        },[titleTop, msgContainer, mainImgRef])
 
     return(
         <>
         <div style={{position:"relative"}}>
             <div ref={mainImgRef} className='mainmedia__content'>
 
-                <img style={{zIndex:"1"}} src={imgLink}/>
+                <img onResize={()=>{
+                    setVideoDim({
+                        offsetWidth:mainImgRef.current.offsetWidth,
+                        offsetHeight:mainImgRef.current.offsetHeight
+                    })
+                }} style={{zIndex:"1"}} src={imgLink}/>
 
                 <ReactPlayer
                     style={{zIndex:showTrailer==="readyToStart" || showTrailer==="playAgain"?"2":"-50", position:"absolute", top:"0"}}
-                    width={typeof mainImgRef.current !=="undefined"? mainImgRef.current.offsetWidth:"100%"} 
-                    height={typeof mainImgRef.current !=="undefined"? mainImgRef.current.offsetHeight:"auto%"}
+                    width={videoDim.offsetWidth} 
+                    height={videoDim.offsetHeight}
                     muted={mute}
                     playing={(showTrailer==="readyToStart" || showTrailer==="playAgain")&&!pauseVideo?true:false}
                     controls={false}

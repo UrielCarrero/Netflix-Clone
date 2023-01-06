@@ -5,6 +5,8 @@ import '../Styles/ColNavbar.css'
 import Netflixlogo from '../Assets/Netflix_logo.png'
 
 export const ColNavbar = ():JSX.Element => {
+
+
     return(<>
     
     <Navbar dark={false}>

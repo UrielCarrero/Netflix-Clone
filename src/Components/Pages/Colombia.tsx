@@ -126,7 +126,11 @@ interface IColombia {
 export const Colombia = ({setEmail}:IColombia):JSX.Element => {
     //<img class="concord-img vlv-creative" src="https://assets.nflxext.com/ffe/siteui/vlv3/0ef67cc5-0aa7-47cf-87bd-7f595afc7cfb/963ba93e-6eab-41d1-8dca-4a14c64d1943/CO-en-20221107-popsignuptwoweeks-perspective_alpha_website_small.jpg" srcset="https://assets.nflxext.com/ffe/siteui/vlv3/0ef67cc5-0aa7-47cf-87bd-7f595afc7cfb/963ba93e-6eab-41d1-8dca-4a14c64d1943/CO-en-20221107-popsignuptwoweeks-perspective_alpha_website_small.jpg 1000w,  1500w, https://assets.nflxext.com/ffe/siteui/vlv3/0ef67cc5-0aa7-47cf-87bd-7f595afc7cfb/963ba93e-6eab-41d1-8dca-4a14c64d1943/CO-en-20221107-popsignuptwoweeks-perspective_alpha_website_large.jpg 1800w" alt="">
     const ref = useRef<any>();
-    const imgRef= useRef<any>();
+    const imgRef= useRef<any>({
+        current:{
+            clientHeight:0
+        }
+    });
     const navigate = useNavigate();
 
     let changeOrder = true;
@@ -137,9 +141,13 @@ export const Colombia = ({setEmail}:IColombia):JSX.Element => {
     let [emailValue, setEmailValue] = useState("")
 
     useEffect(()=>{
-        window.addEventListener('resize', ()=>{
-            setMainHeight(imgRef.current.clientHeight)
-        });
+        if (typeof window !== "undefined" ){
+            window.addEventListener('resize', ()=>{
+                if(imgRef.current!==null)
+                    setMainHeight(imgRef.current.clientHeight)
+            });
+        }
+        
         setMainHeight(imgRef.current.clientHeight)
     },[mainHeight, loadedImg, CardCol, imgRef])
 

@@ -38,12 +38,13 @@ export const CardCol = ({title, description, imgLink, videoDim, videoLink, video
 
         if(videoLink!==undefined){
             window.addEventListener('resize', ()=>{
-                setVideoStyle({
-                    top:bgImgRef.current.offsetTop + (videoDim.topFactor*bgImgRef.current.offsetHeight),
-                    left:bgImgRef.current.offsetLeft + (videoDim.leftFactor*bgImgRef.current.offsetWidth),
-                    height:videoDim.heightFactor*bgImgRef.current.offsetHeight,
-                    width:videoDim.widthFactor*bgImgRef.current.offsetWidth
-                })
+                if(bgImgRef.current!==null)
+                    setVideoStyle({
+                        top:bgImgRef.current.offsetTop + (videoDim.topFactor*bgImgRef.current.offsetHeight),
+                        left:bgImgRef.current.offsetLeft + (videoDim.leftFactor*bgImgRef.current.offsetWidth),
+                        height:videoDim.heightFactor*bgImgRef.current.offsetHeight,
+                        width:videoDim.widthFactor*bgImgRef.current.offsetWidth
+                    })
             });
     
             setVideoStyle({

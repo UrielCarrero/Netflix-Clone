@@ -13,7 +13,7 @@
 .carousel__container{
     z-index: 5 !important;
     position: relative;
-    top:-5% !important;
+    top:-1vw !important;
 }
 
 .modal__container{
@@ -33,4 +33,28 @@
 .background__bigmodal{
     overflow-y: clip;
     width: 100%;
+}
+
+@media screen and (max-width: 920px){
+
+    .carousel__container{
+        top:3.6vw !important;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 676px){
+    .carousel__container{
+        top:9.6vw !important;
+    }
+
+}
+
+@media screen and (max-width: 470px){
+    .carousel__container{
+        top:15.6vw !important;
+    }
+
 }

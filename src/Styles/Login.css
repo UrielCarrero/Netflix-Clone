@@ -26,11 +26,6 @@
     width: 405px;
 }
 
-@media screen and (max-width: 500px){
-    .loginform__cont{
-        width: 100%;
-    }
-}
 
 .Login__errMess{
     background: #e87c03;
@@ -56,6 +51,7 @@
     text-align: start;
     font-weight: 600;
     font-family: Helvetica, Arial, sans-serif;
+    margin-bottom: 25px;
 }
 
 input:-internal-autofill-selected {
@@ -76,7 +72,7 @@ input:-internal-autofill-selected {
     border-radius: 2%;
     position: relative;
     height: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .emailphone__container > label, .passwordlogin__container > label{
@@ -127,11 +123,13 @@ input:-internal-autofill-selected {
 .logsign__in{
     background-color: #e50914;
     color:white;
-    border-radius: 4%;
+    border-radius: 6px;
     width: 100%;
     padding-bottom: 8px;
     padding-top: 8px;
     z-index: 1;
+    margin-top: 20px;
+    border: none;
 }
 
 .beneath__signin{
@@ -140,6 +138,11 @@ input:-internal-autofill-selected {
     font-weight: 400;
     display: flex;
     justify-content: space-between;
+    margin-top: 7px;
+}
+
+.beneath__signin > span > input {
+    margin-right: 3px;
 }
 
 .new__netflixuser{
@@ -147,6 +150,7 @@ input:-internal-autofill-selected {
     font-size: 16px;
     font-weight: 400;
     text-align: start;
+    margin-top: 50px;
 }
 
 .new__netflixuser>span:nth-child(2){
@@ -168,5 +172,17 @@ input:-internal-autofill-selected {
     color: #0071eb;
     text-decoration: underline;
     cursor: pointer;
+}
+
+@media screen and (max-width: 500px){
+    .loginform__cont{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .loginlogo__nav{
+        display: none;
+    }
+
 }
 

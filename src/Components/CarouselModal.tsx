@@ -53,6 +53,9 @@ export const CarouselModal = ({borderLeft, borderRight ,item, width, height,
             setIsHover(false)
             setShowTrailer(false)
         }}
+        onClick={()=>{
+            gatherDescription(item.id, category, page)
+            changeModalState(true)}}
                     
         className={`modal__carousel slide__netflixcarrousel
                     ${isHover?'modal__show':'modal__hide'} 
